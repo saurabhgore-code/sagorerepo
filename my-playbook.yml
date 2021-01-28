@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+  - name: create a file 
+    file: dest=/tmp state=touch mode=644
