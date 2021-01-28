@@ -1,0 +1,11 @@
+---
+- hosts: webservers
+  become: true
+  tasks:
+  - name: Create multiple users
+    user: name={{item}} 
+    with_items:
+    - Manish
+    - Harsh
+    - Kumar
+    - Rahul
